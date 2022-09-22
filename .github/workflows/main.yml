@@ -1,7 +1,7 @@
 name: Update gist with latest YouTube videos
 on:
   schedule:
-    - cron: "1 */7 * * *"
+    - cron: "5 * * * *"
   
 jobs:
   update-gist:
@@ -21,7 +21,7 @@ jobs:
       - name: "Update gist"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: dc3d0f7a3cd13207770a4debbb902d1d
-          CHANNEL_ID: UCrVWVOBoBu7W-aXbApDEuyQ
+          GIST_ID: b176663e3f3b2b76a52c4822a6fc8cb9
+          CHANNEL_ID: UCPopihIU8LMr6T9FCligVHA
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
         run: python main.py
